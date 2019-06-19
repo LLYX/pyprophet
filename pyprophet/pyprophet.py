@@ -202,6 +202,9 @@ class HolyGostQuery(object):
 
     def _setup_experiment(self, table):
         prepared_table, score_columns = prepare_data_table(table, tg_id_name=self.group_id)
+        
+        print(score_columns)
+
         experiment = Experiment(prepared_table)
         experiment.log_summary()
         return experiment, score_columns
