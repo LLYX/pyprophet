@@ -192,6 +192,9 @@ ORDER BY RUN_ID,
                 table = table.rename(index=str, columns={'precursor_charge': 'var_precursor_charge', 'product_charge': 'var_product_charge', 'transition_count': 'var_transition_count'})
 
             con.close()
+
+            print(table.columns)
+
             return(table)
 
         # Main function
